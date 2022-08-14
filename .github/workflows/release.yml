@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.BOT_GITHUB_TOKEN_PRIVATE }}
+          token: ${{ secrets.BOT_GITHUB_TOKEN_PUBLIC }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3

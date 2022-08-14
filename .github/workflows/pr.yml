@@ -18,4 +18,4 @@ jobs:
         with:
           validateSingleCommit: true
         env:
-          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN_PRIVATE }}
+          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN_PUBLIC }}
