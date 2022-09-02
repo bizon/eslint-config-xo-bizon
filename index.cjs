@@ -76,5 +76,8 @@ module.exports = {
         ignoreDeclarationSort: true,
       },
     ],
+
+    // Some dependencies do not respect this, let’s only warn
+    camelcase: 'warn',
   },
 }
