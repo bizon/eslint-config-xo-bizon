@@ -60,6 +60,7 @@ module.exports = {
     // These rules are broken
     'unicorn/no-array-callback-reference': 'off',
     'unicorn/no-array-method-this-argument': 'off',
+    'unicorn/no-thenable': 'off',
 
     // Let’s not use ESM yet
     'unicorn/prefer-module': 'off',
