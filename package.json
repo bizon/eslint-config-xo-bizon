@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-xo-bizon",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "ESLint shareable config to be used with xo or eslint-config-xo",
   "main": "index.cjs",
   "repository": "git@github.com:bizon/eslint-config-xo-bizon.git",
