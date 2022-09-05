@@ -44,6 +44,7 @@
     "xo": "^0.52.3"
   },
   "xo": {
+    "extends": ".",
     "semicolon": false,
     "space": 2,
     "prettier": true

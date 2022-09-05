@@ -1,4 +1,7 @@
 module.exports = {
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+
   rules: {
     // This reverts the "no null" decision from xo
     '@typescript-eslint/ban-types': 'off',
