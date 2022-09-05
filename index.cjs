@@ -16,6 +16,9 @@ module.exports = {
     // This rule is too restrictive
     '@typescript-eslint/restrict-template-expressions': 'off',
 
+    // We prefer interfaces
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+
     // Let’s enable this when we switch to ESM
     'import/extensions': 'off',
 
