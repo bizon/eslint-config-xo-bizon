@@ -85,5 +85,8 @@ module.exports = {
 
     // Some dependencies do not respect this, let’s only warn
     camelcase: 'warn',
+
+    // Broken rule, let’s not use
+    'n/file-extension-in-import': 'off',
   },
 }
