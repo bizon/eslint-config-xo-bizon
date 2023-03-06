@@ -16,6 +16,20 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
 
+    // Enable Typescript version of no-unused-vars
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true,
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrors: 'all',
+        caughtErrorsIgnorePattern: '^_$',
+      },
+    ],
+
     // This rule is too restrictive
     '@typescript-eslint/restrict-template-expressions': 'off',
 
@@ -59,6 +73,9 @@ module.exports = {
         },
       },
     ],
+
+    // Disable in favor of @typescript-eslint/no-unused-vars
+    'no-unused-vars': 'off',
 
     // Let’s only warn one using reduce
     'unicorn/no-array-reduce': 'warn',
