@@ -41,7 +41,7 @@
   "devDependencies": {
     "@bizon/semantic-release-config": "^2.0.0",
     "semantic-release": "^21.0.1",
-    "xo": "^0.53.1"
+    "xo": "^0.54.0"
   },
   "xo": {
     "extends": ".",
