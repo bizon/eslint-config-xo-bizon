@@ -88,9 +88,6 @@ module.exports = {
     // Let’s not use ESM yet
     'unicorn/prefer-module': 'off',
 
-    // This still fails with some libraries
-    'unicorn/prefer-node-protocol': 'off',
-
     // This sorts named imports
     'sort-imports': [
       'error',
