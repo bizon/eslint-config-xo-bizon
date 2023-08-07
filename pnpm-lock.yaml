@@ -12,8 +12,8 @@ devDependencies:
     specifier: ^21.0.7
     version: 21.0.7
   xo:
-    specifier: ^0.55.0
-    version: 0.55.0(webpack@5.88.2)
+    specifier: ^0.55.1
+    version: 0.55.1(webpack@5.88.2)
 
 packages:
 
@@ -466,15 +466,11 @@ packages:
     resolution: {integrity: sha512-gsF+c/0XOguWgaOgvFs+xnnRqt9GwgTvIks36WpE6ueeI4KCEHHd8K/CKHqhOqrJKsYH8m27kRzQEvWXAwXUTw==}
     dependencies:
       '@types/estree': 1.0.0
-      '@types/json-schema': 7.0.11
+      '@types/json-schema': 7.0.12
     dev: true
 
   /@types/estree@1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
-    dev: true
-
-  /@types/json-schema@7.0.11:
-    resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
   /@types/json-schema@7.0.12:
@@ -884,7 +880,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
-      define-properties: 1.1.4
+      define-properties: 1.2.0
       es-abstract: 1.22.1
       get-intrinsic: 1.2.1
       is-string: 1.0.7
@@ -900,7 +896,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
-      define-properties: 1.1.4
+      define-properties: 1.2.0
       es-abstract: 1.22.1
       es-shim-unscopables: 1.0.0
     dev: true
@@ -910,7 +906,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
-      define-properties: 1.1.4
+      define-properties: 1.2.0
       es-abstract: 1.22.1
       es-shim-unscopables: 1.0.0
     dev: true
@@ -1358,14 +1354,6 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /define-properties@1.1.4:
-    resolution: {integrity: sha512-uckOqKcfaVvtBdsVkdPv3XjveQJsNQqmhXgRi8uhvWWuPYZCNlzT8qAyblUgNoXdHdjMTzAqeGjAoli8f+bzPA==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      has-property-descriptors: 1.0.0
-      object-keys: 1.1.1
-    dev: true
-
   /define-properties@1.2.0:
     resolution: {integrity: sha512-xvqAVKGfT1+UAvPwKTVw/njhdQ8ZhXK4lI0bCIuCMrp2up9nPnaDftrLtmpTazqd1o+UY4zgzU+avtMbDP+ldA==}
     engines: {node: '>= 0.4'}
@@ -1631,7 +1619,7 @@ packages:
       is-core-module: 2.12.1
       is-regex: 1.1.4
       lodash: 4.17.21
-      resolve: 1.22.1
+      resolve: 1.22.2
       semver: 5.7.1
       webpack: 5.88.2
     transitivePeerDependencies:
@@ -1731,7 +1719,7 @@ packages:
       is-glob: 4.0.3
       minimatch: 3.1.2
       object.values: 1.1.6
-      resolve: 1.22.1
+      resolve: 1.22.2
       semver: 6.3.1
       tsconfig-paths: 3.14.1
     transitivePeerDependencies:
@@ -2162,7 +2150,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
-      define-properties: 1.1.4
+      define-properties: 1.2.0
       es-abstract: 1.22.1
       functions-have-names: 1.2.3
     dev: true
@@ -2270,7 +2258,7 @@ packages:
     resolution: {integrity: sha512-sFdI5LyBiNTHjRd7cGPWapiHWMOXKyuBNX/cWJ3NfzrZQVa8GI/8cofCl74AOVqq9W5kNmguTIzJ/1s2gyI9wA==}
     engines: {node: '>= 0.4'}
     dependencies:
-      define-properties: 1.1.4
+      define-properties: 1.2.0
     dev: true
 
   /globby@11.1.0:
@@ -3201,7 +3189,7 @@ packages:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.1
+      resolve: 1.22.2
       semver: 5.7.1
       validate-npm-package-license: 3.0.4
     dev: true
@@ -3347,7 +3335,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
-      define-properties: 1.1.4
+      define-properties: 1.2.0
       es-abstract: 1.22.1
     dev: true
 
@@ -3846,15 +3834,6 @@ packages:
 
   /resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
-    dev: true
-
-  /resolve@1.22.1:
-    resolution: {integrity: sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==}
-    hasBin: true
-    dependencies:
-      is-core-module: 2.12.1
-      path-parse: 1.0.7
-      supports-preserve-symlinks-flag: 1.0.0
     dev: true
 
   /resolve@1.22.2:
@@ -4658,8 +4637,8 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
 
-  /xo@0.55.0(webpack@5.88.2):
-    resolution: {integrity: sha512-0pINhVcbW3Iz4W4tRlTwQBATVEr1VMMFfQJzFTLwjCRJJdkJRgXh9BEJtcpttmPjbc7lROhVrR2hGXoq0yAsyQ==}
+  /xo@0.55.1(webpack@5.88.2):
+    resolution: {integrity: sha512-xjwxX6YM2JmAqmoGaXiBSyzE4DVCzSCgIux4Y001BeMc2V42xyoZtdrqICGYwo8or4cS/QBKJqKiy5QbJ+YqHw==}
     engines: {node: '>=16'}
     hasBin: true
     peerDependencies:
