@@ -9,6 +9,9 @@ module.exports = {
     // This would be nice in an ideal world, even warnings are too much
     '@typescript-eslint/naming-convention': 'off',
 
+    // This can be too dangerous if not all values exist in the type
+    '@typescript-eslint/switch-exhaustiveness-check': 'off',
+
     // These rules are too restrictive
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
