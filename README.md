@@ -15,7 +15,7 @@ ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-confi
 ## Install
 
 ```
-$ yarn add --dev eslint-config-xo-bizon
+$ pnpm add -D eslint-config-xo-bizon
 ```
 
 ### Example usage with XO
@@ -35,17 +35,14 @@ $ yarn add --dev eslint-config-xo-bizon
 }
 ```
 
-
 ## Related
 
 - [XO](https://github.com/xojs/xo)
 - [eslint-config-xo](https://github.com/xojs/eslint-config-xo) - ESLint shareable config for XO
 
-
 ## License
 
 MIT © [Bizon](https://github.com/bizon)
-
 
 ## Miscellaneous
 
