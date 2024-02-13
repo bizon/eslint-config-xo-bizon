@@ -88,6 +88,18 @@ module.exports = {
     'unicorn/no-array-method-this-argument': 'off',
     'unicorn/no-thenable': 'off',
 
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        replacements: {
+          // We don’t want fnSku to be replaced anywhere
+          fn: false,
+          // This is ok
+          i: false,
+        },
+      },
+    ],
+
     // Let’s not use ESM yet
     'unicorn/prefer-module': 'off',
 
