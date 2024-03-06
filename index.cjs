@@ -96,6 +96,7 @@ module.exports = {
           fn: false,
           // This is ok
           i: false,
+          props: false,
         },
       },
     ],
