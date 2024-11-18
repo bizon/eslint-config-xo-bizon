@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@bizon/semantic-release-config':
-        specifier: ^3.0.0
-        version: 3.0.0(semantic-release@24.2.0(typescript@5.5.3))
+        specifier: ^3.0.1
+        version: 3.0.1(semantic-release@24.2.0(typescript@5.5.3))
       semantic-release:
         specifier: ^24.2.0
         version: 24.2.0(typescript@5.5.3)
@@ -36,8 +36,8 @@ packages:
     resolution: {integrity: sha512-acGdbYSfp2WheJoJm/EBBBLh/ID8KDc64ISZ9DYtBmC8/Q204PZJLHyzeB5qMzJ5trcOkybd78M4x2KWsUq++A==}
     engines: {node: '>=6.9.0'}
 
-  '@bizon/semantic-release-config@3.0.0':
-    resolution: {integrity: sha512-X2L618JhqRKiMejnXXnNY7z1SLhcO5uLlHsUv3yLDChmJfcYsywAhobkL8U+0AgGivh31KlPnyKeLGVKzBUPjw==}
+  '@bizon/semantic-release-config@3.0.1':
+    resolution: {integrity: sha512-91B2OCmqFLGjrstzQlffEAz8gr7Foo3pon49fsvHvpEOstttqZjwRrGUT3K186jm6E9alY+kNeZT8pmL9Z1dcw==}
     engines: {node: '>=20'}
 
   '@colors/colors@1.5.0':
@@ -208,14 +208,14 @@ packages:
     peerDependencies:
       semantic-release: '>=18.0.0'
 
-  '@semantic-release/github@10.3.3':
-    resolution: {integrity: sha512-zrEdwRZ7ZTEM2JYhF4E+ZgApIfv6iHfQBnnAP1g2LqYZtj56+qWEUo/xW36cbZRDOweejxU40PGZckx6TZzFmg==}
-    engines: {node: '>=20.8.1'}
-    peerDependencies:
-      semantic-release: '>=20.1.0'
-
   '@semantic-release/github@11.0.0':
     resolution: {integrity: sha512-Uon6G6gJD8U1JNvPm7X0j46yxNRJ8Ui6SgK4Zw5Ktu8RgjEft3BGn+l/RX1TTzhhO3/uUcKuqM+/9/ETFxWS/Q==}
+    engines: {node: '>=20.8.1'}
+    peerDependencies:
+      semantic-release: '>=24.1.0'
+
+  '@semantic-release/github@11.0.1':
+    resolution: {integrity: sha512-Z9cr0LgU/zgucbT9cksH0/pX9zmVda9hkDPcgIE0uvjMQ8w/mElDivGjx1w1pEQ+MuQJ5CBq3VCF16S6G4VH3A==}
     engines: {node: '>=20.8.1'}
     peerDependencies:
       semantic-release: '>=24.1.0'
@@ -382,6 +382,7 @@ packages:
 
   acorn-import-assertions@1.9.0:
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
+    deprecated: package has been renamed to acorn-import-attributes
     peerDependencies:
       acorn: ^8
 
@@ -2641,11 +2642,11 @@ snapshots:
       chalk: 2.4.2
       js-tokens: 4.0.0
 
-  '@bizon/semantic-release-config@3.0.0(semantic-release@24.2.0(typescript@5.5.3))':
+  '@bizon/semantic-release-config@3.0.1(semantic-release@24.2.0(typescript@5.5.3))':
     dependencies:
       '@semantic-release/commit-analyzer': 13.0.0(semantic-release@24.2.0(typescript@5.5.3))
       '@semantic-release/git': 10.0.1(semantic-release@24.2.0(typescript@5.5.3))
-      '@semantic-release/github': 10.3.3(semantic-release@24.2.0(typescript@5.5.3))
+      '@semantic-release/github': 11.0.1(semantic-release@24.2.0(typescript@5.5.3))
       '@semantic-release/npm': 12.0.1(semantic-release@24.2.0(typescript@5.5.3))
       '@semantic-release/release-notes-generator': 14.0.1(semantic-release@24.2.0(typescript@5.5.3))
     transitivePeerDependencies:
@@ -2852,7 +2853,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@10.3.3(semantic-release@24.2.0(typescript@5.5.3))':
+  '@semantic-release/github@11.0.0(semantic-release@24.2.0(typescript@5.5.3))':
     dependencies:
       '@octokit/core': 6.0.1
       '@octokit/plugin-paginate-rest': 11.3.3(@octokit/core@6.0.1)
@@ -2874,7 +2875,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@11.0.0(semantic-release@24.2.0(typescript@5.5.3))':
+  '@semantic-release/github@11.0.1(semantic-release@24.2.0(typescript@5.5.3))':
     dependencies:
       '@octokit/core': 6.0.1
       '@octokit/plugin-paginate-rest': 11.3.3(@octokit/core@6.0.1)
