@@ -1,9 +1,9 @@
 # eslint-config-xo-bizon
 
-ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) to be used with [xo](https://github.com/xojs/xo) or [eslint-config-xo](https://github.com/xojs/eslint-config-xo)
-
 [![npm version](https://badgen.net/npm/v/eslint-config-xo-bizon)](https://www.npmjs.com/package/eslint-config-xo-bizon)
 [![XO code style](https://badgen.net/badge/code%20style/XO/cyan)](https://github.com/xojs/xo)
+
+ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) to be used with [xo](https://github.com/xojs/xo) or [eslint-config-xo](https://github.com/xojs/eslint-config-xo)
 
 [<img src="https://files.bizon.solutions/images/logo/bizon-horizontal.png" alt="Bizon" width="250"/>](https://www.bizon.solutions?utm_source=github&utm_medium=readme&utm_campaign=eslint-config-xo-bizon)
 
