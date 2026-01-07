@@ -32,7 +32,6 @@ export default [...xoBizon];
 ## Related
 
 - [XO](https://github.com/xojs/xo)
-- [eslint-config-xo](https://github.com/xojs/eslint-config-xo) - ESLint shareable config for XO
 
 ## License
 
