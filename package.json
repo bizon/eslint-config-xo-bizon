@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-xo-bizon",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "ESLint shareable config to be used with xo or eslint-config-xo",
   "repository": "git@github.com:bizon/eslint-config-xo-bizon.git",
   "author": "Bertrand Marron",
