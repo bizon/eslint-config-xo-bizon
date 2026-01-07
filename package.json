@@ -2,7 +2,6 @@
   "name": "eslint-config-xo-bizon",
   "version": "3.0.3",
   "description": "ESLint shareable config to be used with xo or eslint-config-xo",
-  "main": "index.cjs",
   "repository": "git@github.com:bizon/eslint-config-xo-bizon.git",
   "author": "Bertrand Marron",
   "license": "MIT",
@@ -11,8 +10,11 @@
     "node": ">=22"
   },
   "files": [
-    "index.cjs"
+    "src"
   ],
+  "exports": {
+    ".": "./src/xo.js"
+  },
   "keywords": [
     "eslintconfig",
     "xo",
@@ -37,17 +39,13 @@
     "hint",
     "bizon"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "eslint-plugin-import": "^2.32.0"
+  },
   "devDependencies": {
     "@bizon/semantic-release-config": "^3.0.2",
     "semantic-release": "^24.2.3",
-    "xo": "^0.60.0"
-  },
-  "xo": {
-    "extends": ".",
-    "semicolon": false,
-    "space": 2,
-    "prettier": true
+    "xo": "^1.2.3"
   },
   "prettier": {
     "printWidth": 100
@@ -55,5 +53,5 @@
   "release": {
     "extends": "@bizon/semantic-release-config"
   },
-  "packageManager": "pnpm@10.6.3+sha512.bb45e34d50a9a76e858a95837301bfb6bd6d35aea2c5d52094fa497a467c43f5c440103ce2511e9e0a2f89c3d6071baac3358fc68ac6fb75e2ceb3d2736065e6"
+  "packageManager": "pnpm@10.27.0+sha512.72d699da16b1179c14ba9e64dc71c9a40988cbdc65c264cb0e489db7de917f20dcf4d64d8723625f2969ba52d4b7e2a1170682d9ac2a5dcaeaab732b7e16f04a"
 }
