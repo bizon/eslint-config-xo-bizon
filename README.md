@@ -20,19 +20,13 @@ $ pnpm add -D eslint-config-xo-bizon
 
 ### Example usage with XO
 
-```json
-{
-  "name": "my-awesome-project",
-  "devDependencies": {
-    "xo": "*",
-    "eslint-config-xo-bizon": "*"
-  },
-  "xo": {
-    "extends": "xo-bizon",
-    "semicolon": false,
-    "space": 2
-  }
-}
+Create a `xo.config.js` file in your project root with the following content:
+
+```js
+import xoBizon from "eslint-config-xo-bizon";
+
+/** @type {import('xo').FlatXoConfig} */
+export default [...xoBizon];
 ```
 
 ## Related
