@@ -12,9 +12,7 @@
   "files": [
     "src"
   ],
-  "exports": {
-    ".": "./src/xo.js"
-  },
+  "exports": "./src/xo.js",
   "keywords": [
     "eslintconfig",
     "xo",
