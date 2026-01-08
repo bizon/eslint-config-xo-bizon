@@ -139,6 +139,7 @@ const xoConfig: XoConfigItem[] = [
     },
   },
 
+  // XO defaults
   {
     semicolon: false,
     space: 2,
