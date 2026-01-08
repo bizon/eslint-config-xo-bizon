@@ -1,13 +1,13 @@
 {
   "name": "eslint-config-xo-bizon",
   "version": "4.1.0",
-  "description": "ESLint shareable config to be used with xo or eslint-config-xo",
+  "description": "ESLint shareable config to be used with xo",
   "repository": "https://github.com/bizon/eslint-config-xo-bizon",
-  "author": "Bertrand Marron",
+  "author": "Bertrand Marron <bertrand.marron@gmail.com>",
   "license": "MIT",
   "type": "module",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "files": [
     "dist"
@@ -56,9 +56,6 @@
     "hint",
     "bizon"
   ],
-  "prettier": {
-    "printWidth": 100
-  },
   "release": {
     "extends": "@bizon/semantic-release-config"
   },
