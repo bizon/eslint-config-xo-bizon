@@ -1,8 +1,11 @@
 import {type XoConfigItem} from 'xo'
 
+const TS_FILES_GLOB = '**/*.{ts,mts,cts,tsx}'
+
 const xoConfig: XoConfigItem[] = [
   // Plugin: @typescript-eslint
   {
+    files: TS_FILES_GLOB,
     rules: {
       // This reverts the "no null" decision from xo
       '@typescript-eslint/ban-types': 'off',
@@ -20,7 +23,8 @@ const xoConfig: XoConfigItem[] = [
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-return': 'off',
 
-      // Enable Typescript version of no-unused-vars
+      // Disable no-unused-vars in favor of @typescript-eslint/no-unused-vars
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -112,6 +116,9 @@ const xoConfig: XoConfigItem[] = [
           },
         },
       ],
+
+      // Let’s not use ESM yet
+      'unicorn/prefer-module': 'off',
     },
   },
 
@@ -126,12 +133,6 @@ const xoConfig: XoConfigItem[] = [
   // Core ESLint rules
   {
     rules: {
-      // Disable in favor of @typescript-eslint/no-unused-vars
-      'no-unused-vars': 'off',
-
-      // Let’s not use ESM yet
-      'unicorn/prefer-module': 'off',
-
       // This sorts named imports
       'sort-imports': [
         'error',
