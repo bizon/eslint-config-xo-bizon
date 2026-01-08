@@ -29,6 +29,14 @@ import xoBizon from "eslint-config-xo-bizon";
 export default [...xoBizon];
 ```
 
+Or in typescript:
+
+```ts
+import xoBizon from "eslint-config-xo-bizon";
+
+export default [...xoBizon] satisfies import("xo").FlatXoConfig;
+```
+
 ## Related
 
 - [XO](https://github.com/xojs/xo)
