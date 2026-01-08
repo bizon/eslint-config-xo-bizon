@@ -1,11 +1,8 @@
-import importPlugin from 'eslint-plugin-import'
+import {type FlatXoConfig} from 'xo'
 
-/** @type {import('xo').FlatXoConfig} */
-const config = [
+const xoConfig: FlatXoConfig = [
+  // Plugin: @typescript-eslint
   {
-    plugins: {
-      import: importPlugin,
-    },
     rules: {
       // This reverts the "no null" decision from xo
       '@typescript-eslint/ban-types': 'off',
@@ -42,12 +39,14 @@ const config = [
 
       // We prefer interfaces
       '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    },
+  },
 
-      // Let’s enable this when we switch to ESM
-      'import/extensions': 'off',
-
+  // Plugin: import-x
+  {
+    rules: {
       // Arbitrary import order rules
-      'import/order': [
+      'import-x/order': [
         'error',
         {
           groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
@@ -80,10 +79,12 @@ const config = [
           },
         },
       ],
+    },
+  },
 
-      // Disable in favor of @typescript-eslint/no-unused-vars
-      'no-unused-vars': 'off',
-
+  // Plugin: unicorn
+  {
+    rules: {
       // Let’s only warn one using reduce
       'unicorn/no-array-reduce': 'warn',
 
@@ -104,6 +105,22 @@ const config = [
           },
         },
       ],
+    },
+  },
+
+  // Plugin: n
+  {
+    rules: {
+      // Broken rule, let’s not use
+      'n/file-extension-in-import': 'off',
+    },
+  },
+
+  // Core ESLint rules
+  {
+    rules: {
+      // Disable in favor of @typescript-eslint/no-unused-vars
+      'no-unused-vars': 'off',
 
       // Let’s not use ESM yet
       'unicorn/prefer-module': 'off',
@@ -119,11 +136,14 @@ const config = [
 
       // Some dependencies do not respect this, let’s only warn
       camelcase: 'warn',
-
-      // Broken rule, let’s not use
-      'n/file-extension-in-import': 'off',
     },
+  },
+
+  {
+    semicolon: false,
+    space: 2,
+    prettier: true,
   },
 ]
 
-export default config
+export default xoConfig

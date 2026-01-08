@@ -10,9 +10,28 @@
     "node": ">=22"
   },
   "files": [
-    "src"
+    "dist"
   ],
-  "exports": "./src/xo.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "check:ts": "tsc --noEmit",
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "devDependencies": {
+    "@bizon/semantic-release-config": "^3.1.0",
+    "@tsconfig/node24": "^24.0.3",
+    "@types/node": "^24.10.4",
+    "semantic-release": "^25.0.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "xo": "^1.2.3"
+  },
   "keywords": [
     "eslintconfig",
     "xo",
@@ -37,19 +56,20 @@
     "hint",
     "bizon"
   ],
-  "dependencies": {
-    "eslint-plugin-import": "^2.32.0"
-  },
-  "devDependencies": {
-    "@bizon/semantic-release-config": "^3.1.0",
-    "semantic-release": "^25.0.2",
-    "xo": "^1.2.3"
-  },
   "prettier": {
     "printWidth": 100
   },
   "release": {
     "extends": "@bizon/semantic-release-config"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "esm"
+    ],
+    "dts": true
   },
   "packageManager": "pnpm@10.27.0+sha512.72d699da16b1179c14ba9e64dc71c9a40988cbdc65c264cb0e489db7de917f20dcf4d64d8723625f2969ba52d4b7e2a1170682d9ac2a5dcaeaab732b7e16f04a"
 }
