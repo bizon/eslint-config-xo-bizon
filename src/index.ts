@@ -1,6 +1,6 @@
-import {type FlatXoConfig} from 'xo'
+import {type XoConfigItem} from 'xo'
 
-const xoConfig: FlatXoConfig = [
+const xoConfig: XoConfigItem[] = [
   // Plugin: @typescript-eslint
   {
     rules: {
