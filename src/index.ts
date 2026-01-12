@@ -109,9 +109,6 @@ const xoConfig: XoConfigItem[] = [
           },
         },
       ],
-
-      // Let’s not use ESM yet
-      'unicorn/prefer-module': 'off',
     },
   },
 
