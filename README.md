@@ -1,6 +1,5 @@
 # eslint-config-xo-bizon
 
-[![npm version](https://badgen.net/npm/v/eslint-config-xo-bizon)](https://www.npmjs.com/package/eslint-config-xo-bizon)
 [![npm version](https://img.shields.io/npm/v/eslint-config-xo-bizon)](https://www.npmjs.com/package/eslint-config-xo-bizon)
 [![XO code style](https://img.shields.io/badge/code_style-xo-cyan)](https://github.com/xojs/xo)
 
