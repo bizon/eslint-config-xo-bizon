@@ -1,7 +1,8 @@
 # eslint-config-xo-bizon
 
 [![npm version](https://badgen.net/npm/v/eslint-config-xo-bizon)](https://www.npmjs.com/package/eslint-config-xo-bizon)
-[![XO code style](https://badgen.net/badge/code%20style/XO/cyan)](https://github.com/xojs/xo)
+[![npm version](https://img.shields.io/npm/v/eslint-config-xo-bizon)](https://www.npmjs.com/package/eslint-config-xo-bizon)
+[![XO code style](https://img.shields.io/badge/code_style-xo-cyan)](https://github.com/xojs/xo)
 
 ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) to be used with [xo](https://github.com/xojs/xo).
 
