@@ -43,6 +43,35 @@ const xoConfig: XoConfigItem[] = [
 
       // We prefer interfaces
       '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+
+      // Warn about deprecated APIs instead of erroring
+      '@typescript-eslint/no-deprecated': 'warn',
+
+      // Update restricted types
+      // This removes `null` from https://github.com/xojs/eslint-config-xo-typescript/blob/main/index.js#L96-L121
+      '@typescript-eslint/no-restricted-types': [
+        'error',
+        {
+          types: {
+            object: {
+              message:
+                'The `object` type is hard to use. Use `Record<string, unknown>` instead. See: https://github.com/typescript-eslint/typescript-eslint/pull/848',
+              fixWith: 'Record<string, unknown>',
+            },
+            Buffer: {
+              message:
+                'Use Uint8Array instead. See: https://sindresorhus.com/blog/goodbye-nodejs-buffer',
+              suggest: ['Uint8Array'],
+            },
+            '[]': "Don't use the empty array type `[]`. It only allows empty arrays. Use `SomeType[]` instead.",
+            '[[]]':
+              "Don't use `[[]]`. It only allows an array with a single element which is an empty array. Use `SomeType[][]` instead.",
+            '[[[]]]': "Don't use `[[[]]]`. Use `SomeType[][][]` instead.",
+            '[[[[]]]]': 'ur drunk 🤡',
+            '[[[[[]]]]]': '🦄💥',
+          },
+        },
+      ],
     },
   },
 
