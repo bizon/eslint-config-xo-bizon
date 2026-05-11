@@ -7,9 +7,6 @@ const xoConfig: XoConfigItem[] = [
   {
     files: TS_FILES_GLOB,
     rules: {
-      // This reverts the "no null" decision from xo
-      '@typescript-eslint/ban-types': 'off',
-
       // This would be nice in an ideal world, even warnings are too much
       '@typescript-eslint/naming-convention': 'off',
 
@@ -23,8 +20,6 @@ const xoConfig: XoConfigItem[] = [
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-return': 'off',
 
-      // Disable no-unused-vars in favor of @typescript-eslint/no-unused-vars
-      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
