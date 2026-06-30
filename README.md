@@ -14,7 +14,7 @@ ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-confi
 
 ## Install
 
-```
+```sh
 $ pnpm add -D eslint-config-xo-bizon
 ```
 
@@ -23,18 +23,18 @@ $ pnpm add -D eslint-config-xo-bizon
 Create a `xo.config.js` file in your project root with the following content:
 
 ```js
-import xoBizon from "eslint-config-xo-bizon";
+import xoBizon from 'eslint-config-xo-bizon'
 
 /** @type {import('xo').FlatXoConfig} */
-export default [...xoBizon];
+export default [...xoBizon]
 ```
 
 Or in typescript:
 
 ```ts
-import xoBizon from "eslint-config-xo-bizon";
+import xoBizon from 'eslint-config-xo-bizon'
 
-export default [...xoBizon] satisfies import("xo").FlatXoConfig;
+export default [...xoBizon] satisfies import('xo').FlatXoConfig
 ```
 
 ## Related
@@ -47,7 +47,7 @@ MIT © [Bizon](https://github.com/bizon)
 
 ## Miscellaneous
 
-```
+```text
     ╚⊙ ⊙╝
   ╚═(███)═╝
  ╚═(███)═╝

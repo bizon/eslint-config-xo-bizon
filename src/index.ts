@@ -1,6 +1,7 @@
 import {type XoConfigItem} from 'xo'
 
 const TS_FILES_GLOB = '**/*.{ts,mts,cts,tsx}'
+const JS_TS_FILES_GLOB = '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'
 
 const xoConfig: XoConfigItem[] = [
   // Plugin: @typescript-eslint
@@ -112,6 +113,7 @@ const xoConfig: XoConfigItem[] = [
 
   // Plugin: unicorn
   {
+    files: JS_TS_FILES_GLOB,
     rules: {
       // Let’s only warn one using reduce
       'unicorn/no-array-reduce': 'warn',
