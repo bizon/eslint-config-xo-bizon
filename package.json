@@ -20,15 +20,18 @@
   },
   "scripts": {
     "check:ts": "tsc --noEmit",
-    "build": "tsup",
-    "dev": "tsup --watch"
+    "build": "tsdown",
+    "dev": "tsdown --watch"
+  },
+  "peerDependencies": {
+    "xo": ">=3"
   },
   "devDependencies": {
     "@bizon/semantic-release-config": "^3.1.0",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.12.3",
     "semantic-release": "^25.0.5",
-    "tsup": "^8.5.1",
+    "tsdown": "^0.22.3",
     "typescript": "^6.0.3",
     "xo": "^3.0.2"
   },
@@ -58,15 +61,6 @@
   ],
   "release": {
     "extends": "@bizon/semantic-release-config"
-  },
-  "tsup": {
-    "entry": [
-      "src/index.ts"
-    ],
-    "format": [
-      "esm"
-    ],
-    "dts": true
   },
   "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b"
 }

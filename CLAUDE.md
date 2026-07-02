@@ -4,7 +4,7 @@
 
 ## Project overview
 
-Shared XO/ESLint configuration, published to npm as `eslint-config-xo-bizon` and used across the TypeScript projects. Written in TypeScript, bundled with tsup, managed with pnpm.
+Shared XO/ESLint configuration, published to npm as `eslint-config-xo-bizon` and used across the TypeScript projects. Written in TypeScript, bundled with tsdown, managed with pnpm.
 
 ## Checks (run after every change)
 
@@ -13,7 +13,7 @@ pnpm xo        # linter (ESLint-based via XO)
 pnpm check:ts  # type checker (tsc --noEmit)
 ```
 
-- `pnpm build` — bundle with tsup (ESM output + type declarations)
+- `pnpm build` — bundle with tsdown (ESM output + type declarations)
 - `pnpm xo --fix <path>` to auto-fix lint issues in a specific file
 - No test suite in this project
 
@@ -29,13 +29,13 @@ pnpm check:ts  # type checker (tsc --noEmit)
 ## Project structure
 
 - `src/index.ts` — the exported flat config (single `.` export)
-- `dist/` — tsup build output (ESM + type declarations)
+- `dist/` — tsdown build output (ESM + type declarations)
 
 ## Code patterns
 
 - **Node version**: 24 (see `.node-version`)
 - **Package runner**: use `pnpx` instead of `npx`
-- **Build**: tsup, ESM output with type declarations
+- **Build**: tsdown, ESM output with type declarations
 
 ## CI/CD
 
