@@ -31,7 +31,7 @@
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.13.3",
     "semantic-release": "^25.0.7",
-    "tsdown": "^0.22.3",
+    "tsdown": "^0.22.8",
     "typescript": "^7.0.2",
     "xo": "^4.0.0"
   },
