@@ -123,7 +123,7 @@ const xoConfig: XoConfigItem[] = [
       'unicorn/no-array-method-this-argument': 'off',
       'unicorn/no-thenable': 'off',
 
-      'unicorn/prevent-abbreviations': [
+      'unicorn/name-replacements': [
         'error',
         {
           replacements: {
