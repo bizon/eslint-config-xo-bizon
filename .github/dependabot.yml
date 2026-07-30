@@ -11,3 +11,9 @@ updates:
     versioning-strategy: increase
     schedule:
       interval: weekly
+    ignore:
+      # Track the Node.js runtime major (24.x, see .node-version / engines).
+      # Bump deliberately when the runtime moves to a new major.
+      - dependency-name: "@types/node"
+        update-types:
+          - version-update:semver-major
