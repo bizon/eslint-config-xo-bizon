@@ -173,6 +173,9 @@ const xoConfig: XoConfigItem[] = [
   // Core ESLint rules
   {
     rules: {
+      // Pagination, rate-limited APIs and ordered writes need sequential awaits
+      'no-await-in-loop': 'off',
+
       // This sorts named imports
       'sort-imports': [
         'error',
