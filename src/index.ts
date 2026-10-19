@@ -101,6 +101,14 @@ const xoConfig: XoConfigItem[] = [
     },
   },
 
+  // Plugin: @stylistic
+  {
+    rules: {
+      // Prettier removes the parentheses it asks for, as in `a - (b * c) / d`
+      '@stylistic/no-mixed-operators': 'off',
+    },
+  },
+
   // Plugin: import-x
   {
     settings: {
