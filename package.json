@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-xo-bizon",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "description": "ESLint shareable config to be used with xo",
   "license": "MIT",
   "repository": "https://github.com/bizon/eslint-config-xo-bizon",
