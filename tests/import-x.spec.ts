@@ -14,3 +14,9 @@ describe('import-x/order', () => {
     ])
   })
 })
+
+describe('import-x/internal-regex', () => {
+  it('correct', async () => {
+    expect(await lintFixture('import-x/internal-regex.correct.ts')).toEqual([])
+  })
+})

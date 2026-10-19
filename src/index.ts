@@ -103,6 +103,10 @@ const xoConfig: XoConfigItem[] = [
 
   // Plugin: import-x
   {
+    settings: {
+      // `@/` path aliases are internal, even when they resolve outside the nearest package.json
+      'import-x/internal-regex': '^@/',
+    },
     rules: {
       // Arbitrary import order rules
       'import-x/order': [
