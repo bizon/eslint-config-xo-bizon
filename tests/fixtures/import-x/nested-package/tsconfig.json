@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "nodenext",
+    "paths": {
+      "@/lib/*": ["./lib/*"]
+    }
+  },
+  "include": ["**/*.ts"]
+}

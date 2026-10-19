@@ -29,8 +29,8 @@ pnpm test      # fixture tests (Jest)
 ## Project structure
 
 - `src/index.ts` – the exported flat config (single `.` export)
-- `tests/*.spec.ts` – fixture tests, one file per plugin, linting with the exported config
-- `tests/fixtures/` – `<rule-id>.correct.*` must lint clean, `<rule-id>.incorrect.*` must report exactly the asserted messages; excluded from `pnpm xo` and `check:ts`
+- `tests/*.spec.ts` – fixture tests, one file per plugin, linting with the exported config; a fixture project gets its own spec file, because the TypeScript import resolver caches the first tsconfig it finds
+- `tests/fixtures/` – `<rule-id>.correct.*` must lint clean, `<rule-id>.incorrect.*` must report exactly the asserted messages; fixture projects (a directory with its own `tsconfig.json`, linted with `lintFixtureProject()`) cover resolution-dependent rules; excluded from `pnpm xo` and `check:ts`
 - `dist/` – tsdown build output (ESM + type declarations)
 
 ## Code patterns
