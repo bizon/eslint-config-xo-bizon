@@ -1,0 +1,8 @@
+{
+  "name": "nested-package-fixture-scripts",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "xo": "*"
+  }
+}

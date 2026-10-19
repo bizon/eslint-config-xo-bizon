@@ -101,8 +101,20 @@ const xoConfig: XoConfigItem[] = [
     },
   },
 
+  // Plugin: @stylistic
+  {
+    rules: {
+      // Prettier removes the parentheses it asks for, as in `a - (b * c) / d`
+      '@stylistic/no-mixed-operators': 'off',
+    },
+  },
+
   // Plugin: import-x
   {
+    settings: {
+      // `@/` path aliases are internal, even when they resolve outside the nearest package.json
+      'import-x/internal-regex': '^@/',
+    },
     rules: {
       // Arbitrary import order rules
       'import-x/order': [
@@ -144,6 +156,18 @@ const xoConfig: XoConfigItem[] = [
   // Plugin: unicorn
   {
     rules: {
+      // Express routers and SDK clients are set up when their module loads
+      'unicorn/no-top-level-side-effects': 'off',
+
+      // Jest matchers, Joi schemas and date-fns helpers nest calls by design
+      'unicorn/max-nested-calls': 'off',
+
+      // It only reports the first mutation, which leaves conditionally built objects half inlined
+      'unicorn/no-immediate-mutation': 'off',
+
+      // An `is` or `has` prefix rarely makes names like `success` or `value` clearer
+      'unicorn/consistent-boolean-name': 'off',
+
       // Let’s only warn one using reduce
       'unicorn/no-array-reduce': 'warn',
 

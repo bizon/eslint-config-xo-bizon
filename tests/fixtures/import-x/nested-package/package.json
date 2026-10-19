@@ -1,0 +1,5 @@
+{
+  "name": "nested-package-fixture",
+  "private": true,
+  "type": "module"
+}
