@@ -2,6 +2,12 @@ import {describe, expect, it} from '@jest/globals'
 
 import {lintFixture} from './utils/lint-fixture.js'
 
+describe('no-await-in-loop', () => {
+  it('correct', async () => {
+    expect(await lintFixture('no-await-in-loop.correct.ts')).toEqual([])
+  })
+})
+
 describe('sort-imports', () => {
   it('correct', async () => {
     expect(await lintFixture('sort-imports.correct.ts')).toEqual([])
