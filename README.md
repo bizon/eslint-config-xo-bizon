@@ -15,8 +15,10 @@ ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-confi
 ## Install
 
 ```sh
-$ pnpm add -D eslint-config-xo-bizon
+$ pnpm add -D xo eslint-config-xo-bizon
 ```
+
+Requires XO 5 or later.
 
 ### Example usage with XO
 

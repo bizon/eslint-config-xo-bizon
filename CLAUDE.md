@@ -10,12 +10,12 @@ Shared XO/ESLint configuration, published to npm as `eslint-config-xo-bizon` and
 
 ```bash
 pnpm xo        # linter (ESLint-based via XO)
-pnpm check:ts  # type checker (tsc --noEmit)
+pnpm check:ts  # type checker (tsc --noEmit, for src, tests and root config files)
+pnpm test      # fixture tests (Jest)
 ```
 
 - `pnpm build` — bundle with tsdown (ESM output + type declarations)
 - `pnpm xo --fix <path>` to auto-fix lint issues in a specific file
-- No test suite in this project
 
 ## Commit and PR conventions
 
@@ -28,18 +28,21 @@ pnpm check:ts  # type checker (tsc --noEmit)
 
 ## Project structure
 
-- `src/index.ts` — the exported flat config (single `.` export)
-- `dist/` — tsdown build output (ESM + type declarations)
+- `src/index.ts` – the exported flat config (single `.` export)
+- `tests/*.spec.ts` – fixture tests, one file per plugin, linting with the exported config
+- `tests/fixtures/` – `<rule-id>.correct.*` must lint clean, `<rule-id>.incorrect.*` must report exactly the asserted messages; excluded from `pnpm xo` and `check:ts`
+- `dist/` – tsdown build output (ESM + type declarations)
 
 ## Code patterns
 
 - **Node version**: 24 (see `.node-version`)
 - **Package runner**: use `pnpx` instead of `npx`
 - **Build**: tsdown, ESM output with type declarations
+- **Rule tests**: every rule that `src/index.ts` sets has a fixture test
 
 ## CI/CD
 
-- **Tests** (`tests.yml`): lint + type check on every PR and push to master
+- **Tests** (`tests.yml`): lint + type check + tests on every PR and push to master
 - **Release** (`release.yml`): semantic-release + npm publish
 - **PR validation** (`pr.yml`): enforces semantic PR titles
 

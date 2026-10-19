@@ -1,15 +1,31 @@
-import {type XoConfigItem} from 'xo'
-
-const TS_FILES_GLOB = '**/*.{ts,mts,cts,tsx}'
-const JS_TS_FILES_GLOB = '**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'
+import {jsFilesGlob, tsFilesGlob, type XoConfigItem} from 'xo'
 
 const xoConfig: XoConfigItem[] = [
   // Plugin: @typescript-eslint
   {
-    files: TS_FILES_GLOB,
+    files: tsFilesGlob,
     rules: {
-      // This would be nice in an ideal world, even warnings are too much
-      '@typescript-eslint/naming-convention': 'off',
+      // Only check the names we declare: properties and destructured bindings mirror third-party APIs
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          selector: 'variableLike',
+          format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+          leadingUnderscore: 'allowSingleOrDouble',
+          trailingUnderscore: 'allow',
+        },
+        {
+          selector: ['variable', 'parameter'],
+          modifiers: ['destructured'],
+          format: null,
+        },
+        {
+          selector: 'typeLike',
+          format: ['PascalCase'],
+          leadingUnderscore: 'allow',
+          trailingUnderscore: 'allow',
+        },
+      ],
 
       // This can be too dangerous if not all values exist in the type
       '@typescript-eslint/switch-exhaustiveness-check': 'off',
@@ -21,6 +37,8 @@ const xoConfig: XoConfigItem[] = [
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-return': 'off',
 
+      // XO relies on TypeScript’s `noUnusedLocals` and `noUnusedParameters`, which
+      // `@tsconfig/node*` bases do not enable
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -37,6 +55,18 @@ const xoConfig: XoConfigItem[] = [
       // This rule is too restrictive
       '@typescript-eslint/restrict-template-expressions': 'off',
 
+      // XO’s options, plus nullable strings to allow `if (!process.env.FOO)`
+      '@typescript-eslint/strict-boolean-expressions': [
+        'error',
+        {
+          allowNullableBoolean: true,
+          allowNullableObject: true,
+          allowNullableString: true,
+          allowNumber: false,
+          allowString: false,
+        },
+      ],
+
       // We prefer interfaces
       '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
 
@@ -44,7 +74,7 @@ const xoConfig: XoConfigItem[] = [
       '@typescript-eslint/no-deprecated': 'warn',
 
       // Update restricted types
-      // This removes `null` from https://github.com/xojs/eslint-config-xo-typescript/blob/main/index.js#L96-L121
+      // This removes `null` from https://github.com/xojs/eslint-config-xo/blob/main/source/typescript-rules.js
       '@typescript-eslint/no-restricted-types': [
         'error',
         {
@@ -113,36 +143,30 @@ const xoConfig: XoConfigItem[] = [
 
   // Plugin: unicorn
   {
-    files: JS_TS_FILES_GLOB,
     rules: {
       // Let’s only warn one using reduce
       'unicorn/no-array-reduce': 'warn',
 
-      // These rules are broken
-      'unicorn/no-array-callback-reference': 'off',
-      'unicorn/no-array-method-this-argument': 'off',
+      // Joi `when()` and MongoDB `$cond` take a `then` key
       'unicorn/no-thenable': 'off',
 
-      'unicorn/name-replacements': [
-        'error',
-        {
-          replacements: {
-            // We don’t want fnSku to be replaced anywhere
-            fn: false,
-            // This is ok
-            i: false,
-            props: false,
-          },
-        },
-      ],
+      // Its suggested names are rarely better
+      'unicorn/name-replacements': 'off',
+
+      // Single-line JSDoc comments are fine
+      'unicorn/single-line-block-comment-style': 'off',
     },
   },
 
-  // Plugin: n
+  // Plugin: package-json
   {
+    files: '**/package.json',
     rules: {
-      // Broken rule, let’s not use
-      'n/file-extension-in-import': 'off',
+      // `@types/aws-lambda` types the Lambda runtime, which has no npm package
+      'package-json/no-orphan-types': ['error', {ignore: ['@types/aws-lambda']}],
+
+      // Publishing with pnpm rewrites `workspace:` ranges
+      'package-json/no-workspace-protocol-in-published-package': 'off',
     },
   },
 
@@ -157,9 +181,14 @@ const xoConfig: XoConfigItem[] = [
           ignoreDeclarationSort: true,
         },
       ],
-
-      // Some dependencies do not respect this, let’s only warn
-      camelcase: 'warn',
+    },
+  },
+  {
+    // XO disables `camelcase` in TypeScript in favor of `@typescript-eslint/naming-convention`
+    files: jsFilesGlob,
+    rules: {
+      // Only check the names we choose, not the ones third-party APIs impose
+      camelcase: ['error', {properties: 'never', ignoreDestructuring: true, ignoreImports: true}],
     },
   },
 
