@@ -59,7 +59,7 @@
     "@types/node": "^24.19.2",
     "jest": "^30.5.2",
     "semantic-release": "^25.0.9",
-    "tsdown": "^0.22.14",
+    "tsdown": "^0.23.1",
     "typescript": "^7.0.2",
     "xo": "^5.0.1"
   },
