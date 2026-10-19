@@ -2,39 +2,30 @@
   "name": "eslint-config-xo-bizon",
   "version": "4.5.0",
   "description": "ESLint shareable config to be used with xo",
+  "license": "MIT",
   "repository": "https://github.com/bizon/eslint-config-xo-bizon",
   "author": "Bertrand Marron <bertrand.marron@gmail.com>",
-  "license": "MIT",
   "type": "module",
-  "engines": {
-    "node": ">=24"
-  },
-  "files": [
-    "dist"
-  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     }
   },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@12.9.1+sha512.06b055fff5cd20dc12781de173ced3310ce0951bf2ec620211a16045d5444d5c93a663210764ef29a653a610459ba0368f0e74f84d80c54723cf95aae7bc0d6d",
   "scripts": {
-    "check:ts": "tsc --noEmit",
+    "check:ts": "tsc --noEmit && tsc --noEmit -p tests/tsconfig.json",
     "build": "tsdown",
-    "dev": "tsdown --watch"
+    "dev": "tsdown --watch",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
-  "peerDependencies": {
-    "xo": ">=4"
-  },
-  "devDependencies": {
-    "@bizon/semantic-release-config": "^3.1.0",
-    "@tsconfig/node24": "^24.0.5",
-    "@types/node": "^24.13.3",
-    "semantic-release": "^25.0.9",
-    "tsdown": "^0.22.14",
-    "typescript": "^7.0.2",
-    "xo": "^4.0.0"
-  },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "eslintconfig",
     "xo",
@@ -59,8 +50,23 @@
     "hint",
     "bizon"
   ],
+  "devDependencies": {
+    "@bizon/semantic-release-config": "^3.1.0",
+    "@jest/globals": "^30.5.2",
+    "@swc/core": "^1.16.18",
+    "@swc/jest": "^0.2.39",
+    "@tsconfig/node24": "^24.0.5",
+    "@types/node": "^24.13.3",
+    "jest": "^30.5.2",
+    "semantic-release": "^25.0.9",
+    "tsdown": "^0.22.14",
+    "typescript": "^7.0.2",
+    "xo": "^5.0.1"
+  },
+  "peerDependencies": {
+    "xo": ">=5"
+  },
   "release": {
     "extends": "@bizon/semantic-release-config"
-  },
-  "packageManager": "pnpm@12.9.1+sha512.06b055fff5cd20dc12781de173ced3310ce0951bf2ec620211a16045d5444d5c93a663210764ef29a653a610459ba0368f0e74f84d80c54723cf95aae7bc0d6d"
+  }
 }

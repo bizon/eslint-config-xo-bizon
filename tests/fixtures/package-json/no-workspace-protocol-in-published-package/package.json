@@ -1,0 +1,21 @@
+{
+  "name": "fixture-workspace-protocol",
+  "version": "1.0.0",
+  "description": "Fixture",
+  "license": "MIT",
+  "type": "module",
+  "bin": "./bin/cli.js",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=24"
+  },
+  "files": [
+    "bin"
+  ],
+  "keywords": [
+    "fixture"
+  ],
+  "dependencies": {
+    "fixture-no-orphan-types": "workspace:*"
+  }
+}
