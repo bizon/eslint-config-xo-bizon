@@ -1,7 +1,7 @@
-export function describeStock(quantity: number | undefined, sku: string, note: any): string {
-  if (!sku) {
-    return 'Unknown product'
+export function describeCount(count: number | undefined, label: string, note: any): string {
+  if (!label) {
+    return 'Unknown'
   }
 
-  return quantity ? `${quantity} in stock${note ? ` (${note})` : ''}` : 'Out of stock'
+  return count ? `${count} ${label}${note ? ` (${note})` : ''}` : `No ${label}`
 }

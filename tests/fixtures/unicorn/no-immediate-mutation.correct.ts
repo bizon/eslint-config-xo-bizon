@@ -1,8 +1,8 @@
-export function buildQuery(clientId?: string) {
+export function buildQuery(name?: string) {
   const query: Record<string, string> = {}
 
-  if (clientId !== undefined) {
-    query.clientId = clientId
+  if (name !== undefined) {
+    query.name = name
   }
 
   return query

@@ -1,19 +1,19 @@
-type Marketplace = 'de' | 'fr' | 'it'
+type Language = 'de' | 'fr' | 'it'
 
-export function getDomain(marketplace: Marketplace): string {
-  let domain = 'amazon.com'
+export function getGreeting(language: Language): string {
+  let greeting = 'Hello'
 
-  switch (marketplace) {
+  switch (language) {
     case 'de': {
-      domain = 'amazon.de'
+      greeting = 'Hallo'
       break
     }
 
     case 'fr': {
-      domain = 'amazon.fr'
+      greeting = 'Bonjour'
       break
     }
   }
 
-  return domain
+  return greeting
 }

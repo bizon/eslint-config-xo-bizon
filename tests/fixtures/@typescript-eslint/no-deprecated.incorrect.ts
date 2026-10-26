@@ -1,12 +1,12 @@
 /**
-Returns the seller ID.
+Returns the user ID.
 
-@deprecated Use `getSellerId()` instead.
+@deprecated Use `getUserId()` instead.
 */
 function getId(): string {
-  return 'A1B2C3'
+  return '42'
 }
 
-export function getSellerId(): string {
+export function getUserId(): string {
   return getId()
 }

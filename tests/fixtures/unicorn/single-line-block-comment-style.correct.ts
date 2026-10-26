@@ -1,4 +1,4 @@
-export interface Seller {
-  /** Amazon merchant token. */
+export interface User {
+  /** Unique identifier. */
   id: string
 }

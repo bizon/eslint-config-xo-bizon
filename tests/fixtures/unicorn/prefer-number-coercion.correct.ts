@@ -1,3 +1,3 @@
-export function parsePrice(price: string) {
-  return Number.parseFloat(price)
+export function parseWidth(width: string) {
+  return Number.parseFloat(width)
 }
