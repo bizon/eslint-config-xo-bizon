@@ -55,17 +55,8 @@ const xoConfig: XoConfigItem[] = [
       // This rule is too restrictive
       '@typescript-eslint/restrict-template-expressions': 'off',
 
-      // XO’s options, plus nullable strings to allow `if (!process.env.FOO)`
-      '@typescript-eslint/strict-boolean-expressions': [
-        'error',
-        {
-          allowNullableBoolean: true,
-          allowNullableObject: true,
-          allowNullableString: true,
-          allowNumber: false,
-          allowString: false,
-        },
-      ],
+      // Spelling out truthiness checks as comparisons easily changes behavior on 0, '' or NaN
+      '@typescript-eslint/strict-boolean-expressions': 'off',
 
       // We prefer interfaces
       '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
@@ -167,6 +158,9 @@ const xoConfig: XoConfigItem[] = [
 
       // An `is` or `has` prefix rarely makes names like `success` or `value` clearer
       'unicorn/consistent-boolean-name': 'off',
+
+      // `Number()` turns '' and null into 0 and '12px' into NaN, unlike `Number.parseFloat()`
+      'unicorn/prefer-number-coercion': 'off',
 
       // Let’s only warn one using reduce
       'unicorn/no-array-reduce': 'warn',

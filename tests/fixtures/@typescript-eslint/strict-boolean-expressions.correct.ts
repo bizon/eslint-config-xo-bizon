@@ -1,9 +1,7 @@
-import process from 'node:process'
-
-export function getSentryDsn(): string {
-  if (!process.env.SENTRY_DSN) {
-    throw new Error('Missing SENTRY_DSN')
+export function describeStock(quantity: number | undefined, sku: string, note: any): string {
+  if (!sku) {
+    return 'Unknown product'
   }
 
-  return process.env.SENTRY_DSN
+  return quantity ? `${quantity} in stock${note ? ` (${note})` : ''}` : 'Out of stock'
 }
