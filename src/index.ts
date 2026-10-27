@@ -162,6 +162,9 @@ const xoConfig: XoConfigItem[] = [
       // `Number()` turns '' and null into 0 and '12px' into NaN, unlike `Number.parseFloat()`
       'unicorn/prefer-number-coercion': 'off',
 
+      // Separate guards read better than one combined, often negated, condition
+      'unicorn/prefer-combined-guards': 'off',
+
       // Let’s only warn one using reduce
       'unicorn/no-array-reduce': 'warn',
 
