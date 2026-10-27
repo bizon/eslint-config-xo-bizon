@@ -26,6 +26,12 @@ describe('unicorn/consistent-boolean-name', () => {
   })
 })
 
+describe('unicorn/prefer-number-coercion', () => {
+  it('correct', async () => {
+    expect(await lintFixture('unicorn/prefer-number-coercion.correct.ts')).toEqual([])
+  })
+})
+
 describe('unicorn/no-array-reduce', () => {
   it('incorrect', async () => {
     expect(await lintFixture('unicorn/no-array-reduce.incorrect.ts')).toEqual([

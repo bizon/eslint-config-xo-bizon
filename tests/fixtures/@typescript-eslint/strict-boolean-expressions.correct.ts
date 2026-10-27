@@ -1,9 +1,7 @@
-import process from 'node:process'
-
-export function getSentryDsn(): string {
-  if (!process.env.SENTRY_DSN) {
-    throw new Error('Missing SENTRY_DSN')
+export function describeCount(count: number | undefined, label: string, note: any): string {
+  if (!label) {
+    return 'Unknown'
   }
 
-  return process.env.SENTRY_DSN
+  return count ? `${count} ${label}${note ? ` (${note})` : ''}` : `No ${label}`
 }

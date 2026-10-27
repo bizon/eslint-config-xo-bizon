@@ -1,3 +1,3 @@
-export interface Seller {
+export interface User {
   id: string
 }

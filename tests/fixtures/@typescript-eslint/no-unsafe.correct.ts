@@ -2,13 +2,13 @@ function format(value: string): string {
   return value.trim()
 }
 
-export function readSellerId(body: string): string {
+export function readUserId(body: string): string {
   const payload = JSON.parse(body)
   payload.validate()
 
-  return format(payload.seller.id)
+  return format(payload.user.id)
 }
 
-export function readSeller(body: string): {id: string} {
+export function readUser(body: string): {id: string} {
   return JSON.parse(body)
 }

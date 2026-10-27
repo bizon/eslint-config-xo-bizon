@@ -1,3 +1,3 @@
-export type Seller = {
+export type User = {
   id: string
 }

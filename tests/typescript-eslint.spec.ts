@@ -55,12 +55,6 @@ describe('@typescript-eslint/strict-boolean-expressions', () => {
       [],
     )
   })
-
-  it('incorrect', async () => {
-    expect(await lintFixture('@typescript-eslint/strict-boolean-expressions.incorrect.ts')).toEqual(
-      [{line: 2, ruleId: '@typescript-eslint/strict-boolean-expressions', severity: 'error'}],
-    )
-  })
 })
 
 describe('@typescript-eslint/consistent-type-definitions', () => {

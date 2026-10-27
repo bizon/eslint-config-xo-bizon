@@ -4,6 +4,6 @@ function register(path: string, name: string) {
   routes.set(path, name)
 }
 
-register('/sellers', 'sellers')
+register('/users', 'users')
 
 export default routes

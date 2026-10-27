@@ -1,4 +1,4 @@
-export const requiredForEstimates = {
-  is: 'estimate',
+export const requiredForDrafts = {
+  is: 'draft',
   then: 'required',
 }
