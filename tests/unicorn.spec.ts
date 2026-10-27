@@ -32,6 +32,12 @@ describe('unicorn/prefer-number-coercion', () => {
   })
 })
 
+describe('unicorn/prefer-combined-guards', () => {
+  it('correct', async () => {
+    expect(await lintFixture('unicorn/prefer-combined-guards.correct.ts')).toEqual([])
+  })
+})
+
 describe('unicorn/no-array-reduce', () => {
   it('incorrect', async () => {
     expect(await lintFixture('unicorn/no-array-reduce.incorrect.ts')).toEqual([
